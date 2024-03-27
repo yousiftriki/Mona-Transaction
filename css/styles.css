@@ -606,7 +606,7 @@ h3{
 .hero-btn{
     display: inline-block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     border: 1px solid var(--main-color);
     padding: 12px 34px;
     font-size: 13px;
