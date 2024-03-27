@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="x-icon" href="images/MTCLogo.png">
+    <title>Mona Transaction Services</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!--box-icons link-->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+
+    <!--header-->
+    <header>
+        <a href="index.html" class='logo'>
+            <img src="images/MTCLogo.png">
+        </a>
+
+        <ul class='navbar'>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class='h-btn'>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!--home section-->
+    <section class="home">
+        <div class="home-text">
+            <h1>a la carte real estate transaction services</h1>
+            <p>SAVING YOU TIME AND PROVIDING PEACE OF MIND</p>
+
+            <div class="h-search">
+                <form id="emailForm">
+                    <input type="email" placeholder="Enter your email...">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+            <div class="home-img">
+                <img src="images/reata.png">
+            </div>
+    </section>
+
+    <!---property section-->
+	<section class="property" data-aos="zoom-in-up">
+		<div class="center-left">
+            <p>WHAT WE ARE BEST AT</p>
+			<h2>Our Services</h2>
+		</div>
+
+		<div class="property-content">
+			<div class="row">
+				<img src="images/TC1.png">
+				<h5>Listing Coordinator</h5>
+				<p>Prepare a a property to go live on the MLS through document execution</p>
+				<div class="list">
+				</div>
+			</div>
+
+			<div class="row">
+				<img src="images/TC2.png">
+				<h5>Notary Public</h5>
+				<p>Authenticate and execute on the delivery of required documents</p>
+			</div>
+
+			<div class="row">
+				<img src="images/TC3.png">
+				<h5>Closing Coordinator</h5>
+				<p>A-la-carte transaction services from reviewing documents to scheduling closings</p>
+			</div>
+
+		</div>
+
+		<div class="center-btn">
+			<a href="services.html" class="btn">Services</a>
+		</div>
+	</section>
+
+    <!---about section-->
+	<section class="about">
+		<div class="about-img" data-aos="zoom-in-up">
+			<img src="images/Main Pics.png">
+		</div>
+
+		<div class="about-text" data-aos="zoom-in-up">
+			<h2>We are a team of skilled coordinators</h2>
+			<p>With Mona Transaction Services, you have a real estate transaction coordinator focused on helping you flourish in a competitive market. With years of experience under our belt and our network of resources, we can ensure that all parties related to your transactions are in line and all parts of the process are on schedule.</p>
+			<a href="about.html" class="btn">About</a>
+		</div>
+	</section>
+
+    <!--contact section-->
+	<section class="Subscribe" data-aos="zoom-in-up">
+		<div class="Subscribe-content">
+			<h2>Keep Calm and Hire a Transaction Coordinator</h2>
+			<p>More time to focus on higher-dollar activities like lead gen and sales.</p>
+			<a href="contact.html" class="btn">Contact Us</a>
+		</div>
+	</section>
+
+    <!---footer-->
+	<section class="contact" data-aos="zoom-in-up">
+		<div class="contact-content">
+			<img src="images/MTCLogo.png">
+			<p>a la carte transaction services from reviewing documents to scheduling closings</p>
+			<div class="icons">
+				<a href="https://www.facebook.com/MonaTransactionServices/"><i class='bx bxl-facebook'></i></a>
+				<a href="https://www.instagram.com/monatcservices/"><i class='bx bxl-instagram-alt'></i></a>
+			</div>
+		</div>
+
+		<div class="contact-content">
+			<h4>Mona Transaction Services</h4>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+		</div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+     document.addEventListener('DOMContentLoaded', function() {
+            // Get the email input field
+            var emailInput = document.querySelector('#emailForm input[type="email"]');
+
+
+            // Add event listener to the form
+            document.getElementById('emailForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                var email = emailInput.value.trim(); // Get the trimmed value of the email input
+
+                if (email !== '') {
+                    // Save the email in Local Storage
+                    var savedEmails = localStorage.getItem('savedEmails') ? JSON.parse(localStorage.getItem('savedEmails')) : [];
+                    savedEmails.push(email);
+                    localStorage.setItem('savedEmails', JSON.stringify(savedEmails));
+
+                    // Optionally, you can display a message indicating that the email has been saved
+                    alert('Thank you for providing your email we will add you to our contacts!!');
+                } else {
+                    alert('Please enter a valid email address!');
+                }
+
+                // Clear the input field
+                emailInput.value = '';
+
+                return false; // Prevent form submission and page reload
+            });
+        });
+    AOS.init({
+    	offset: 300,
+    	duration: 1200
+    });
+  </script>
+
+    <!--js file-->
+    <script src="js/script.js"></script>
+</body>
+</html>
