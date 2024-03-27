@@ -87,6 +87,9 @@ header{
 section{
     padding: 80px 15% 70px;
 }
+.home {
+    margin-top: 100px; /* Adjust the value as needed to prevent the header from being covered */
+}
 .home{
     position: relative;
     height: 100vh;
